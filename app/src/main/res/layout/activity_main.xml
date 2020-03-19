@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD FILE(Simple upload)"
+        android:id="@+id/button1"
+        android:onClick="uploadFile"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/chooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose file"
+        android:onClick="chooseFile"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        />
+
+    <Button
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose video"
+        android:onClick="addVideo"
+        app:layout_constraintTop_toBottomOf="@id/chooser"
+        />
+
+    <Button
+        android:id="@+id/resume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resumable upload"
+        android:onClick="resumableUpload"
+        app:layout_constraintTop_toBottomOf="@+id/video"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/resume"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
